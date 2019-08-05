@@ -32,7 +32,7 @@ body {
 /* PIERWSZY DIV ZAWIERAJĄCY KRÓTKI WSTĘP MIEŚCI SIĘ W JEDNEJ KOLUMNIE */
 
 .Introduction {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
     position: relative;
     background-image: url(background-pic.jpg);
     background-color: #111;
@@ -45,6 +45,7 @@ body {
 
 
 .helloText {
+  font-family: 'Noto Sans TC', sans-serif;
   -webkit-animation:spin 2s ease-in-out 1;
   -moz-animation:spin 2s ease-in-out;
   animation:spin 2s ease-in-out;
@@ -231,6 +232,7 @@ body {
 }
 
 #askForUser {
+  font-family: 'Noto Sans TC', sans-serif;
   padding-top: 20px;
   text-align: center;
   
@@ -283,6 +285,7 @@ color: white;
 }
 
 #AboutMeTitle {
+  font-family: 'Noto Sans TC', sans-serif;
   text-align: center;
   align-self: flex-end;
   
@@ -296,7 +299,7 @@ color: white;
   border: 1px solid black;
   margin: 50px;
   margin-top: 0px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
   -moz-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
   box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
@@ -321,6 +324,11 @@ color: white;
 .myData {
   padding: 20px;
   text-align:left;
+  font-weight: 700;
+}
+
+.myData span {
+  font-weight: 400;
 }
 
 #Description {
@@ -339,6 +347,7 @@ color: white;
 }
 
 #SkillsTitle {
+  font-family: 'Noto Sans TC', sans-serif;
   align-self: flex-end;
 }
 
@@ -495,6 +504,7 @@ color: white;
 #PortfolioHeader {
   display:flex;
   grid-area: PortfolioHeader;
+  font-family: 'Noto Sans TC', sans-serif;
   height: 150px;
   justify-content: center;
 }
@@ -526,9 +536,12 @@ color: white;
   text-align: left;
 }
 
+#city {
+  font-weight: 700;
+}
+
 #when {
   text-align: right
-
 }
 
 
@@ -672,6 +685,7 @@ color: white;
 }
 
 .adres{
+  font-weight: 500;
   font-size: 22px;
   margin-bottom:5%;
   margin-left: 20px;
@@ -703,6 +717,7 @@ q {
 
 
 .QuestionsForm h2 {
+  font-family: 'Noto Sans TC', sans-serif;
   width: 100%;
   font-size: 1.5em;
   padding: 30px;
