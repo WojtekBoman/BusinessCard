@@ -1,0 +1,996 @@
+
+html, 
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(237,237,237);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Opakowanie na wszystkie divy w moim gridzie */
+.wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "Introduction  Navigation"
+    "InfoForBeginners InfoForBeginners"
+    "AboutMeHeader   AboutMeHeader"
+    "AboutMe  AboutMe"
+    "SkillsHeader SkillsHeader"
+    "HardSkills  SoftSkills"
+    "PortfolioHeader   PortfolioHeader" 
+    "Portfolio   Portfolio"
+    "Questions   Questions"
+    "stopka      stopka";
+}
+/* Opakowanie na wszystkie divy w moim gridzie */
+
+    
+
+/* PIERWSZY DIV ZAWIERAJĄCY KRÓTKI WSTĘP MIEŚCI SIĘ W JEDNEJ KOLUMNIE */
+
+.Introduction {
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    background-image: url(background-pic.jpg);
+    background-color: #111;
+    background-size: cover;
+    padding: 20px;
+    height: 500px;
+    grid-area: Introduction;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow:hidden;
+}
+
+.helloText {
+  -webkit-animation:spin 2s ease-in-out 1;
+  -moz-animation:spin 2s ease-in-out;
+  animation:spin 2s ease-in-out;
+}
+
+@-moz-keyframes spin { 
+  0%{
+    opacity: 0;
+  }
+  100% { 
+    -moz-transform: rotate(360deg); 
+    opacity: 1;
+  } 
+}
+@-webkit-keyframes spin { 
+  0% {
+    opacity: 0;
+  }
+  100% { 
+    -webkit-transform: rotate(360deg); 
+    opacity: 1;
+  }
+ }
+@keyframes spin { 
+  0% {
+    opacity: 0;
+  }
+  100% { 
+    -webkit-transform: rotate(360deg); transform:rotate(360deg); 
+    opacity: 1;
+  } 
+}
+
+
+.Introduction h2{
+  font-weight: 500;
+  animation-delay: 3s;
+  animation: enterMainText 2s ease-in-out 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes enterMainText {
+  100%{
+    opacity: 1;
+  }
+}
+
+#firstDivText {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: -1000px;
+  min-width: 60%;
+  max-width: 70%;
+  max-height: 100%;
+  animation: enterLoremFromLeft 2s ease-in-out 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes enterLoremFromLeft {
+  100% {
+    left: 20px;
+  }
+}
+
+
+/* DRUGI DIV ZAWIERAJĄCY ODNOŚNIKI DO SOCIAL MEDIOW MIEŚCI SIĘ W JEDNEJ KOLUMNIE OBOK PIERWSZEGO DIVA */
+
+.Navigation {
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: url(background-aboutme.jpg);
+    background-size: cover;
+    height: 500px;
+    grid-area: Navigation;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+/* Informacja o ważnych odnośnikach 
+.Navigation h4 {
+  text-align: center;
+  color: whitesmoke;
+  padding-left: 20px;
+  position: absolute;
+  bottom: 10%;
+  width: 150px;
+  right: 25px;
+  text-decoration: underline;
+
+}
+*/
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    flex-shrink: 1;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    flex-shrink:1;
+    color: white;
+  }
+
+  /* Instagram */
+  .fa-instagram {
+    flex-shrink: 1;
+    color: white;
+  }
+ 
+/*ZDJ HUSKYEGO 
+
+.profilePhoto {
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 11px 10px 12px 2px #111 ;
+    border: 2px solid silver;
+    background-size: cover;
+    width: 40%;
+    height: 40%;
+    z-index: 2;
+    align-self: center;
+
+}
+*/
+
+
+
+/*NAVIGATION BAR*/
+
+ .Navigation ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .Navigation li {
+    float:left;
+    flex-shrink: 1;
+    width:25%;
+  }
+  
+  .Navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 80px;
+    text-decoration: none;
+  }
+
+  /*NAVIGATION BAR*/
+
+ 
+  
+  /* Change the link color to #111 (black) on hover */
+  .Navigation li a:hover {
+    background-color: #111;
+  }
+
+
+.InfoForBeginners {
+  background-color: white;
+  position: relative;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  grid-area: InfoForBeginners;
+  border: 1px solid black;
+  height: auto;
+  -webkit-box-shadow: 2px 16px 17px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 16px 17px -5px rgba(0,0,0,0.75);
+  box-shadow: 2px 16px 17px -5px rgba(0,0,0,0.75);
+  overflow:hidden;
+}
+
+#askForUser {
+  padding-top: 20px;
+  text-align: center;
+  
+}
+
+
+.button {
+  /* Green */
+ border: none;
+ color: white;
+ padding: 15px 32px;
+ width: 200px;
+ margin: 20px 100px;
+ height: auto;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+}
+
+.contactButton {
+ background-color: hsl(225, 100%, 60%);
+ color: white;
+ border-radius: 25px 25px 25px 25px; 
+}
+
+.contactButton:hover{
+background-color: white;
+color: hsl(225, 100%, 60%);
+border: 2px solid hsl(225, 100%, 60%);
+}
+
+.cvButton {
+ border: 2px solid hsl(225, 100%, 60%);
+ background-color: white;
+ color: hsl(225, 100%, 60%);
+ border-radius: 25px 25px 25px 25px;
+ margin-bottom: 40px;
+}
+
+.cvButton:hover {
+background-color:hsl(225, 100%, 60%);
+color: white;
+}
+
+#AboutMeHeader{
+  display: flex;
+  grid-area: AboutMeHeader;
+  height: 150px;
+  justify-content: center;
+  
+}
+
+#AboutMeTitle {
+  text-align: center;
+  align-self: flex-end;
+  
+}
+
+#AboutMe {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  grid-area: AboutMe;
+  height: auto;
+  border: 1px solid black;
+  margin: 50px;
+  margin-top: 0px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  -webkit-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+  box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+  background-color: white; 
+  overflow:hidden;
+  
+}
+
+#InfoAboutMe {
+  border-right: 2px dotted hsl(225, 100%, 60%);
+}
+
+#InfoAboutMe span {
+  color: hsl(225, 100%, 60%);
+}
+
+.myData {
+  padding: 20px;
+  text-align:left;
+}
+
+#Description {
+  padding: 20px;
+  text-align: justify;
+  hyphens: auto;
+  font-size: 20px;
+}
+
+/*    */
+
+#SkillsHeader {
+  display: flex;
+  grid-area: SkillsHeader;
+  height: 150px;
+  justify-content: center;
+}
+
+#SkillsTitle {
+  align-self: flex-end;
+}
+
+
+.HardSkills {
+    list-style: none;
+    grid-area: HardSkills;
+    border: 1px solid black;
+    padding: 20px;
+    height: auto;
+    -webkit-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    background-color: white; 
+    margin: 50px;
+    margin-top: 0px;
+    box-sizing: border-box;
+}
+
+.HardSkills h1 {
+  text-align: center;
+}
+
+.HardSkills li{
+  margin : 20px 0;
+  padding: 40px 20px;
+}
+
+.bar {
+  background: #111;
+  display: block;
+  height: 8px;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 3px;
+  overflow:hidden;
+  box-shadow: 0 0 10px hsl(225, 100%, 60%);
+}
+
+.bar span{
+  height: 8px;
+  float: left;
+  background: hsl(225, 100%, 60%);
+}
+
+.htmlLang{
+  width:80%;
+  animation : htmlLang 2s;
+}
+
+@keyframes htmlLang {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+} 
+
+.cssLang{
+  width:70%;
+  animation : cssLang 2s;
+}
+
+@keyframes cssLang {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+} 
+
+.jsLang{
+  width:60%;
+  animation : jsLang 2s;
+}
+
+@keyframes jsLang {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+} 
+
+
+.SoftSkills {
+  list-style: none;
+  grid-area: SoftSkills;
+  border: 1px solid black;
+  padding: 20px;
+  height: auto;
+  -webkit-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+  box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+  background-color: white; 
+  margin: 50px;
+  margin-top: 0px;
+  box-sizing: border-box;
+}
+
+.SoftSkills h1 {
+  text-align: center;
+}
+
+.SoftSkills li{
+  margin : 20px 0;
+  padding: 40px 20px;
+}
+
+.CommunicationSkill {
+  width: 90%;
+  animation: CommunicationSkill 2s;
+}
+
+@keyframes CommunicationSkill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.LeadershipSkill {
+  width: 90%;
+  animation: LeadershipSkill 2s;
+}
+
+@keyframes LeadershipSkill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.SelfMotivationSkill {
+  width : 80%;
+  animation: SelfMotivationSkill 2s;
+}
+
+@keyframes SelfMotivationSkill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+#PortfolioHeader {
+  display:flex;
+  grid-area: PortfolioHeader;
+  height: 150px;
+  justify-content: center;
+}
+
+#PortfolioHeader h1 {
+  align-self: flex-end;
+}
+
+.Portfolio {
+    height: auto;
+    grid-area: Portfolio;
+    text-align: center;
+	  padding: 0;
+}
+
+.Portfolio img {
+  width: 100%;
+  height: auto;
+}
+
+.Portfolio figcaption {
+  border: 1px solid cornflowerblue;
+  background-color: white;
+  height: auto;
+  padding: 10px;
+}
+
+#city, #country {
+  text-align: left;
+}
+
+#when {
+  text-align: right
+
+}
+
+/*
+.London{
+  
+}
+
+.London:hover {
+ 
+}
+
+*/
+
+.overlayLondon {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.overlayLondon .link {
+  position: absolute;
+  display:block;
+  width: 100%;  
+  background-color: #111;
+  bottom: 0;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.overlayLondon:hover .link {
+  opacity: 0.8;
+}
+
+
+.overlayBerlin {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.overlayBerlin .link {
+  position: absolute;
+  display:block;
+  width: 100%;  
+  height: 100%;
+  background-color: hsl(240, 100%, 13%);
+  color: white;
+  text-decoration: none;
+  padding: 20px 10px;
+  font-family: 'Titillium Web', sans-serif;
+  text-align: center;
+  top:0;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+
+.overlayBerlin:hover .link {
+  opacity: 0.8;
+}
+
+.NYphoto {
+  overflow:hidden;
+}
+
+.NYphoto img {
+  transition: all .3s ease-in-out;
+}
+
+.NYphoto:hover img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.MadridPhoto {
+  overflow:hidden;
+  transition: all 1s ease-in-out;
+}
+
+.MadridPhoto:hover {
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.MoscowPhoto {
+  -webkit-transition: -webkit-filter .5s ease-in-out;
+  transition: -webkit-filter .5s ease-in-out;
+  -o-transition: filter .5s ease-in-out;
+  transition: filter .5s ease-in-out;
+  transition: filter .5s ease-in-out, -webkit-filter .5s ease-in-out;
+}
+
+.MoscowPhoto:hover {
+  -webkit-filter: sepia(1);
+          filter: sepia(1);
+}
+
+.AmsterdamPhoto {
+  -webkit-transition: -webkit-filter .5s ease-in-out;
+  transition: -webkit-filter .5s ease-in-out;
+  -o-transition: filter .5s ease-in-out;
+  transition: filter .5s ease-in-out;
+  transition: filter .5s ease-in-out, -webkit-filter .5s ease-in-out;
+}
+
+.AmsterdamPhoto:hover {
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
+}
+
+
+#Questions {
+  display:grid;
+  grid-area: Questions;
+  grid-template-columns: 2fr 2.5fr;
+  height: auto;
+  font-family: 'Titillium Web', sans-serif;
+  -webkit-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+  box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+  background-color: white; 
+  font-size: 40px;
+  margin: 50px;
+  border: 1px solid black;
+}
+
+
+.QuestionsInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  border-right: 2px dotted blue;
+  font-size: 1.1rem;
+  background-image: linear-gradient(#0575e6, #021b79);
+  color: white;
+  font-weight: 800;
+  background-size: cover;
+  opacity: 0.6;
+  height:auto;
+}
+
+.contentQA {
+  margin: 20px;
+  padding-right: 25px;
+  width: 100%;
+  margin-bottom: 37%;
+  
+}
+
+.adres{
+  font-size: 22px;
+  margin-bottom:5%;
+  margin-left: 20px;
+}
+
+.iconsQA{
+  
+}
+
+q {
+  font-style: italic;
+}
+
+
+
+.QuestionsInfo hr {
+  background-color: white;
+  width: 80%;
+  margin-right: 20%;
+}
+
+
+.QuestionsForm {
+  position: relative;
+  font-size: 25px;
+  padding: 5%;
+}
+
+
+
+.QuestionsForm h2 {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 30px;
+  color: steelblue;
+  text-align: center;
+}
+
+input[type=text], select{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #0575e6;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:  #021b79;
+}
+
+textarea {
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.contentOfMessage {
+  display: block;
+}
+
+
+footer {
+    grid-area: stopka;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 893px) {
+
+  .wrapper
+  {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "Introduction"
+      "Navigation"
+      "InfoForBeginners"
+      "AboutMeHeader"
+      "AboutMe"
+      "SkillsHeader"
+      "SoftSkills"
+      "HardSkills"
+      "PortfolioHeader"
+      "Portfolio"
+      "Questions"
+      "stopka";
+  }
+
+  #firstDivText{
+    
+  }
+
+  .Introduction{
+    padding-bottom: 30px;
+  }
+
+  #AboutMe {
+    grid-area: AboutMe;
+    display:grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+    "InfoAboutMe InfoAboutMe"
+    "Description Description";
+    height: auto;
+    border: 1px solid black;
+    margin: 10px;
+    margin-top: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    background-color: white; 
+    
+  }
+  
+  #InfoAboutMe {
+    grid-area: InfoAboutMe;
+    border-bottom: 2px dotted hsl(225, 100%, 60%);
+  }
+  
+  #InfoAboutMe span {
+    color: hsl(225, 100%, 60%);
+  }
+  
+  .myData {
+    padding: 20px;
+    text-align:left;
+    word-wrap: break-word;
+  }
+  
+  #Description {
+    height: auto;
+    grid-area: Description;
+    padding: 20px;
+    text-align: justify;
+    hyphens: auto;
+    font-size: 20px;
+  }
+
+  
+  
+  .Navigation li {
+    float:left;
+    flex-shrink: 1;
+    width:100%;
+  }
+
+  #Questions {
+    display:grid;
+    grid-area: Questions;
+    grid-template-rows: auto 1.5fr;
+    grid-template-areas: 
+    "QuestionsInfo QuestionsInfo"
+    "QuestionsForm QuestionsForm"
+    ;
+    font-family: 'Titillium Web', sans-serif;
+    -webkit-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    background-color: white; 
+    font-size: 40px;
+    margin: 20px;
+    height:auto;
+    border: 1px solid black;
+  }
+  
+  .QuestionsInfo {
+    grid-area: QuestionsInfo;
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 5%;
+    background-image: linear-gradient(#0575e6, #021b79);
+    color: white;
+    font-weight: 800;
+    background-size: cover;
+    opacity: 0.6;
+    height: auto;
+  }
+
+  
+  
+  .QuestionsForm {
+    grid-area:QuestionsForm;
+    position: relative;
+    width: 100%;
+  }
+  
+  .QuestionsForm header {
+    width: 100%;
+    height: auto;
+    top: 0;
+  }
+  
+  .QuestionsForm h2 {
+    max-width: 100%;
+    padding: 30px;
+    color: steelblue;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 893px) and (max-width: 1290px){
+  .wrapper
+  {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "Introduction Navigation"
+      "InfoForBeginners InfoForBeginners"
+      "AboutMeHeader AboutMeHeader"
+      "AboutMe AboutMe"
+      "SkillsHeader SkillsHeader"
+      "SoftSkills SoftSkills"
+      "HardSkills HardSkills"
+      "PortfolioHeader PortfolioHeader"
+      "Portfolio Portfolio"
+      "Questions Questions"
+      "stopka stopka";
+  }
+
+  .Navigation li {
+    float:left;
+    flex-shrink: 1;
+    width:100%;
+  }
+
+  #Questions {
+    display:grid;
+    grid-area: Questions;
+    grid-template-rows: auto 1.5fr;
+    grid-template-areas: 
+    "QuestionsInfo QuestionsInfo"
+    "QuestionsForm QuestionsForm"
+    ;
+    font-family: 'Titillium Web', sans-serif;
+    -webkit-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    box-shadow: 11px 12px 20px 2px rgba(0,0,0,0.3);
+    background-color: white; 
+    font-size: 40px;
+    margin: 100px;
+    height:auto;
+    border: 1px solid black;
+  }
+  
+  .QuestionsInfo {
+    grid-area: QuestionsInfo;
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 5%;
+    background-image: linear-gradient(#0575e6, #021b79);
+    color: white;
+    font-weight: 800;
+    background-size: cover;
+    opacity: 0.6;
+    height: auto;
+  }
+
+  
+  
+  .QuestionsForm {
+    grid-area:QuestionsForm;
+    position: relative;
+    width: 100%;
+  }
+  
+  .QuestionsForm header {
+    width: 100%;
+    height: auto;
+    top: 0;
+  }
+  
+  .QuestionsForm h2 {
+    max-width: 100%;
+    padding: 30px;
+    color: steelblue;
+    text-align: center;
+  }
+
+}
+  
+
+
