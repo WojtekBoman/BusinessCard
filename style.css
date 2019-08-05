@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(237,237,237);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Opakowanie na wszystkie divy w moim gridzie */
@@ -38,12 +38,11 @@ body {
     background-color: #111;
     background-size: cover;
     padding: 20px;
-    height: 500px;
     grid-area: Introduction;
-    box-sizing: border-box;
     z-index: 1;
-    overflow:hidden;
 }
+
+
 
 .helloText {
   -webkit-animation:spin 2s ease-in-out 1;
@@ -127,19 +126,7 @@ body {
     z-index: 1;
 }
 
-/* Informacja o ważnych odnośnikach 
-.Navigation h4 {
-  text-align: center;
-  color: whitesmoke;
-  padding-left: 20px;
-  position: absolute;
-  bottom: 10%;
-  width: 150px;
-  right: 25px;
-  text-decoration: underline;
 
-}
-*/
 /* Style all font awesome icons */
 .fa {
     padding: 20px;
@@ -251,7 +238,6 @@ body {
 
 
 .button {
-  /* Green */
  border: none;
  color: white;
  padding: 15px 32px;
@@ -319,8 +305,13 @@ color: white;
   
 }
 
-#InfoAboutMe {
-  border-right: 2px dotted hsl(225, 100%, 60%);
+/* Powyzej szerokosci ekranu 893px divy AboutMe i Description są obok siebie oddzielam je wtedy za pomocą border-right,
+ ponizej tej rozdzialki są one pod sobą i rozdzielam je border-bottom  */
+
+@media screen and (min-width : 893px) {
+  #InfoAboutMe {
+    border-right: 2px dotted hsl(225, 100%, 60%);
+  }
 }
 
 #InfoAboutMe span {
@@ -339,7 +330,6 @@ color: white;
   font-size: 20px;
 }
 
-/*    */
 
 #SkillsHeader {
   display: flex;
@@ -541,16 +531,7 @@ color: white;
 
 }
 
-/*
-.London{
-  
-}
 
-.London:hover {
- 
-}
-
-*/
 
 .overlayLondon {
   position: relative;
@@ -673,7 +654,6 @@ color: white;
   justify-content: space-between;
   align-items: flex-start;
   text-align: left;
-  border-right: 2px dotted blue;
   font-size: 1.1rem;
   background-image: linear-gradient(#0575e6, #021b79);
   color: white;
@@ -804,7 +784,7 @@ footer {
   }
 
   .Introduction{
-    padding-bottom: 30px;
+    height: 525px;
   }
 
   #AboutMe {
