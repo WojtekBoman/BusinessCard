@@ -23,7 +23,7 @@ body {
     "PortfolioHeader   PortfolioHeader" 
     "Portfolio   Portfolio"
     "Questions   Questions"
-    "stopka      stopka";
+    "footer     footer";
 }
 /* Opakowanie na wszystkie divy w moim gridzie */
 
@@ -40,6 +40,7 @@ body {
     padding: 20px;
     grid-area: Introduction;
     z-index: 1;
+    height:515px;
 }
 
 
@@ -121,7 +122,7 @@ body {
     flex-wrap: wrap;
     background-image: url(background-aboutme.jpg);
     background-size: cover;
-    height: 500px;
+    height: 515px;
     grid-area: Navigation;
     box-sizing: border-box;
     z-index: 1;
@@ -139,7 +140,7 @@ body {
     justify-self: flex-end;
   }
   
-  /* Add a hover effect if you want */
+  /* Social media icons - hover effect*/
   .fa:hover {
     opacity: 0.7;
     text-decoration: none;
@@ -165,21 +166,6 @@ body {
     color: white;
   }
  
-/*ZDJ HUSKYEGO 
-
-.profilePhoto {
-    border-radius: 50% 50% 50% 50%;
-    box-shadow: 11px 10px 12px 2px #111 ;
-    border: 2px solid silver;
-    background-size: cover;
-    width: 40%;
-    height: 40%;
-    z-index: 2;
-    align-self: center;
-
-}
-*/
-
 
 
 /*NAVIGATION BAR*/
@@ -768,7 +754,7 @@ textarea {
 
 
 footer {
-    grid-area: stopka;
+    grid-area: footer;
     text-align: center;
 }
 
@@ -791,15 +777,16 @@ footer {
       "PortfolioHeader"
       "Portfolio"
       "Questions"
-      "stopka";
+      "footer";
   }
 
-  #firstDivText{
-    
-  }
 
   .Introduction{
-    height: 525px;
+    height: 538px;
+  }
+
+  .Navigation {
+    height:auto;
   }
 
   #AboutMe {
@@ -923,7 +910,7 @@ footer {
       "PortfolioHeader PortfolioHeader"
       "Portfolio Portfolio"
       "Questions Questions"
-      "stopka stopka";
+      "footer footer";
   }
 
   .Navigation li {
